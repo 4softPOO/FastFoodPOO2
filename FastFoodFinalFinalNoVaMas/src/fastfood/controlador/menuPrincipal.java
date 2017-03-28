@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package fastfood.controlador;
+import fastfood.vista.*;
 
 /**
  *
@@ -11,4 +12,9 @@ package fastfood.controlador;
  */
 public class menuPrincipal {
     
+    public static void main(String args[]) {
+        Login obj = new Login();
+        obj.setVisible(true);
+        
+    }
 }

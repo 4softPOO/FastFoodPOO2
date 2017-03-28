@@ -11,4 +11,49 @@ package fastfood.controlador;
  */
 public class login {
     
+    
+    private String usuario;
+    private char[] contra;
+
+    
+
+    public login(){
+    
+    
+    
+    }
+    
+    
+    /*-----------------------------------Metodos GETTERS Y SETTERS---------------------------------------------*/
+    
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+        
+    }
+
+    public void setContra(char[] contra) {
+        this.contra = contra;
+        
+    }
+
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+
+    public char[] getContra() {
+        return contra;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------*/
+    
+    public void validarDatos (){
+    
+       
+    
+    }
+    
 }
+    
+
