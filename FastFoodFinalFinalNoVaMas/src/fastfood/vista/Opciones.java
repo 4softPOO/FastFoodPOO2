@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package fastfood.vista;
+import fastfood.controlador.opciones;
 
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
@@ -27,24 +28,24 @@ public class Opciones extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        contraAntigua = new javax.swing.JTextField();
+        ContraNueva = new javax.swing.JTextField();
+        repetirContra = new javax.swing.JTextField();
+        usuario = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        eliminaCredito = new javax.swing.JButton();
+        eliminarDevito = new javax.swing.JButton();
+        actualizarDebito = new javax.swing.JButton();
+        eliminarCredito = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        telefono = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        direccion = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -66,13 +67,19 @@ public class Opciones extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel3.setText("Repita Contraseña:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, 20));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 120, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 120, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 120, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jLabel5.setText("Carlos Castro");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 120, 30));
+        contraAntigua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contraAntiguaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(contraAntigua, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 120, -1));
+        getContentPane().add(ContraNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 120, -1));
+        getContentPane().add(repetirContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 120, -1));
+
+        usuario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        usuario.setText("Carlos Castro");
+        getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 120, 30));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel6.setText("Tarjeta De Credito: ");
@@ -82,31 +89,31 @@ public class Opciones extends javax.swing.JFrame {
         jLabel7.setText("Tarjeta Debito:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jButton1.setText("Eliminar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, -1, -1));
+        eliminaCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        eliminaCredito.setText("Eliminar");
+        getContentPane().add(eliminaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, -1, -1));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jButton2.setText("Eliminar");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
+        eliminarDevito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        eliminarDevito.setText("Eliminar");
+        getContentPane().add(eliminarDevito, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
 
-        jButton3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jButton3.setText("Actualizar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        actualizarDebito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        actualizarDebito.setText("Actualizar");
+        actualizarDebito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                actualizarDebitoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+        getContentPane().add(actualizarDebito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
 
-        jButton4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jButton4.setText("Actualizar");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        eliminarCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        eliminarCredito.setText("Actualizar");
+        eliminarCredito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                eliminarCreditoActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
+        getContentPane().add(eliminarCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/User-50 (1).png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 60));
@@ -124,12 +131,12 @@ public class Opciones extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel12.setText("Contraseña Antigua:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 20));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
+        getContentPane().add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel13.setText("Telefono:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, 20));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 130, -1));
+        getContentPane().add(direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 130, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 255, 153));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 620, 10));
@@ -167,15 +174,20 @@ public class Opciones extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void actualizarDebitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarDebitoActionPerformed
         actualizarMetodo obj2 = new actualizarMetodo();
         obj2.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_actualizarDebitoActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void eliminarCreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarCreditoActionPerformed
         actualizarMetodo obj3 = new actualizarMetodo();
         obj3.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_eliminarCreditoActionPerformed
+
+    private void contraAntiguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraAntiguaActionPerformed
+        // contraseña antigua:
+        contraAntigua.getText();
+    }//GEN-LAST:event_contraAntiguaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,10 +225,13 @@ public class Opciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JTextField ContraNueva;
+    private javax.swing.JButton actualizarDebito;
+    private javax.swing.JTextField contraAntigua;
+    private javax.swing.JTextField direccion;
+    private javax.swing.JButton eliminaCredito;
+    private javax.swing.JButton eliminarCredito;
+    private javax.swing.JButton eliminarDevito;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -226,7 +241,6 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -235,10 +249,8 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField repetirContra;
+    private javax.swing.JTextField telefono;
+    private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }
