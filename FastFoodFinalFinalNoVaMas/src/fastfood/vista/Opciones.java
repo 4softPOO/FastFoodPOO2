@@ -5,10 +5,7 @@
  */
 package fastfood.vista;
 
-/**
- *
- * @author Andres Arias
- */
+//dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
 
     /**

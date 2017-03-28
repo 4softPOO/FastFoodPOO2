@@ -10,5 +10,8 @@ package fastfood.controlador;
  * @author Paua
  */
 public class opciones {
-    
+
+    public opciones() {
+        System.out.print("Hola");
+    }
 }
