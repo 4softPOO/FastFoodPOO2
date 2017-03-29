@@ -17,7 +17,8 @@ public class opciones {
     public int telefono;
     public String direccion;
     
-            
+         
+    
     public opciones() {
         System.out.print("Hola");
     }

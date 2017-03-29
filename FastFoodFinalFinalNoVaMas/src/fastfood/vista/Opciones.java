@@ -16,6 +16,7 @@ public class Opciones extends javax.swing.JFrame {
         initComponents();
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,7 +30,7 @@ public class Opciones extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         contraAntigua = new javax.swing.JTextField();
-        ContraNueva = new javax.swing.JTextField();
+        contraNueva = new javax.swing.JTextField();
         repetirContra = new javax.swing.JTextField();
         usuario = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -74,7 +75,19 @@ public class Opciones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(contraAntigua, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 120, -1));
-        getContentPane().add(ContraNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 120, -1));
+
+        contraNueva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contraNuevaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(contraNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 120, -1));
+
+        repetirContra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                repetirContraActionPerformed(evt);
+            }
+        });
         getContentPane().add(repetirContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 120, -1));
 
         usuario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
@@ -131,11 +144,23 @@ public class Opciones extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel12.setText("Contraseña Antigua:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 20));
+
+        telefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                telefonoActionPerformed(evt);
+            }
+        });
         getContentPane().add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel13.setText("Telefono:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, 20));
+
+        direccion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                direccionActionPerformed(evt);
+            }
+        });
         getContentPane().add(direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 130, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 255, 153));
@@ -189,6 +214,26 @@ public class Opciones extends javax.swing.JFrame {
         contraAntigua.getText();
     }//GEN-LAST:event_contraAntiguaActionPerformed
 
+    private void contraNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraNuevaActionPerformed
+        // contraseña nueva:
+        contraNueva.getText();
+    }//GEN-LAST:event_contraNuevaActionPerformed
+
+    private void repetirContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repetirContraActionPerformed
+        // repetir contraseña:
+        repetirContra.getText();
+    }//GEN-LAST:event_repetirContraActionPerformed
+
+    private void telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoActionPerformed
+        // telefono:
+        telefono.getText();
+    }//GEN-LAST:event_telefonoActionPerformed
+
+    private void direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_direccionActionPerformed
+        // direccion:
+        direccion.getText();
+    }//GEN-LAST:event_direccionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -225,9 +270,9 @@ public class Opciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ContraNueva;
     private javax.swing.JButton actualizarDebito;
     private javax.swing.JTextField contraAntigua;
+    private javax.swing.JTextField contraNueva;
     private javax.swing.JTextField direccion;
     private javax.swing.JButton eliminaCredito;
     private javax.swing.JButton eliminarCredito;
