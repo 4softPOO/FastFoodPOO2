@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package fastfood.controlador;
+import fastfood.vista.*;
+
 
 /**
  *
@@ -14,16 +16,14 @@ public class login {
     
     private String usuario;
     private char[] contra;
+    
 
     
 
     public login(){
     
-    
-    
     }
-    
-    
+  
     /*-----------------------------------Metodos GETTERS Y SETTERS---------------------------------------------*/
     
     public void setUsuario(String usuario) {
@@ -33,7 +33,7 @@ public class login {
 
     public void setContra(char[] contra) {
         this.contra = contra;
-        
+        validarDatos();
     }
 
 
@@ -51,8 +51,15 @@ public class login {
     public void validarDatos (){
     
        
-    
+        
+        System.out.print("Usuario "+ getUsuario()+ "Contraseña " + getContra());
+        
+        
+        
+  
     }
+    
+    
     
 }
     
