@@ -33,7 +33,7 @@ public class login {
 
     public void setContra(char[] contra) {
         this.contra = contra;
-        validarDatos();
+        //validarDatos();
     }
 
 
@@ -45,44 +45,39 @@ public class login {
     public char[] getContra() {
         return contra;
     }
-
+}
     /*----------------------------------------------------------------------------------------------------------*/
     
-    public void validarDatos (){
+    /* public void validarDatos () {
+
+     do {
+
+    if  (usuario !=  getUsuario)
     
-       
-        
-        System.out.print("Usuario "+ getUsuario()+ "Contraseña " + getContra());
-        
-          
-  
- /* -----------------------------  lo que el profe explico  -----------------
-    
-    
-    String usuario  = "Usuario";
-    
-    public String validar() {
-        
-       
-    if(usuario = getUsuario)
-    
-    System.out.println("Usuario valido"+ getUsuario)
-        
+        System.out.println ("Usuario no valido" + getUsuario)        
     else 
     
-    System.out.println ("Usuario no valido" + getUsuario)
+    	Systemystem.out.println("Usuario valido"+ getUsuario)
+	
+    } while (getUsuario == 3) 
+        
    
-        
-    if (contraseña = getContraseña)
-     
-    System.out.println("Contraseña valida"+ getContraseña)
-        
-    else 
+    do {
+
+	if(contraseña !=  getContraseña)
+   
+        System.out.println ("Contraseña no valida" + getContraseña)        
     
-    System.out.println ("Contraseña no valida" + getContraseña)
-       
-     }
-       
+	else 
+  
+    	Systemystem.out.println("Contraseña valida"+ getUsuario)
+
+
+    } while (getContraseña == 3) 
+        
+    
+    System.out.print("Usuario "+ getUsuario()+ "Contraseña " + getContra());
+        
     }
 
 
