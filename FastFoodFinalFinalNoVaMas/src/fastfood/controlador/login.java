@@ -54,12 +54,26 @@ public class login {
         
         System.out.print("Usuario "+ getUsuario()+ "Contraseña " + getContra());
         
-        
-        
+          
   
+    }
+    /*
+    strin contraseña ="Hola";
+    string contraseña = "Usuairo"
+    
+    public String validar(){
+    
+    if(usuario = getUsuario )
+     
+    System.out.println("Usuario valido"+ getUsuario)
+    
     }
     
     
+    
+
+
+}*/
     
 }
     
