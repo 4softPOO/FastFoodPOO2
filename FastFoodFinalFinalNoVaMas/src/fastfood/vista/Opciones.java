@@ -8,7 +8,7 @@ import fastfood.controlador.opciones;
 
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
-
+int telefonoint;
     /**
      * Creates new form Opciones
      */
@@ -44,7 +44,7 @@ public class Opciones extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        telefono = new javax.swing.JTextField();
+        telefonoTF = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         direccion = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
@@ -145,12 +145,12 @@ public class Opciones extends javax.swing.JFrame {
         jLabel12.setText("Contraseña Antigua:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 20));
 
-        telefono.addActionListener(new java.awt.event.ActionListener() {
+        telefonoTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefonoActionPerformed(evt);
+                telefonoTFActionPerformed(evt);
             }
         });
-        getContentPane().add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
+        getContentPane().add(telefonoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel13.setText("Telefono:");
@@ -181,6 +181,11 @@ public class Opciones extends javax.swing.JFrame {
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Save as-48.png"))); // NOI18N
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, 60, 60));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -211,28 +216,34 @@ public class Opciones extends javax.swing.JFrame {
 
     private void contraAntiguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraAntiguaActionPerformed
         // contraseña antigua:
-        contraAntigua.getText();
     }//GEN-LAST:event_contraAntiguaActionPerformed
 
     private void contraNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraNuevaActionPerformed
         // contraseña nueva:
-        contraNueva.getText();
     }//GEN-LAST:event_contraNuevaActionPerformed
 
     private void repetirContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repetirContraActionPerformed
         // repetir contraseña:
-        repetirContra.getText();
     }//GEN-LAST:event_repetirContraActionPerformed
 
-    private void telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoActionPerformed
+    private void telefonoTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoTFActionPerformed
         // telefono:
-        telefono.getText();
-    }//GEN-LAST:event_telefonoActionPerformed
+        
+    }//GEN-LAST:event_telefonoTFActionPerformed
 
     private void direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_direccionActionPerformed
         // direccion:
-        direccion.getText();
     }//GEN-LAST:event_direccionActionPerformed
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        opciones obj = new opciones();
+         obj.setContraAntigua(contraAntigua.getText());
+         obj.setContraNueva(contraNueva.getText());
+         obj.setRepetirContra(repetirContra.getText());
+         obj.setTelefono(telefonoint=Integer.parseInt(telefonoTF.getText()));
+         obj.setDireccion(direccion.getText());
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
@@ -295,7 +306,7 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextField repetirContra;
-    private javax.swing.JTextField telefono;
+    private javax.swing.JTextField telefonoTF;
     private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }
