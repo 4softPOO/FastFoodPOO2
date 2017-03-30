@@ -56,25 +56,38 @@ public class login {
         
           
   
-    }
-    /*
-    strin contraseña ="Hola";
-    string contraseña = "Usuairo"
+ /* -----------------------------  lo que el profe explico  -----------------
     
-    public String validar(){
     
-    if(usuario = getUsuario )
-     
+    String usuario  = "Usuario";
+    
+    public String validar() {
+        
+       
+    if(usuario = getUsuario)
+    
     System.out.println("Usuario valido"+ getUsuario)
+        
+    else 
     
+    System.out.println ("Usuario no valido" + getUsuario)
+   
+        
+    if (contraseña = getContraseña)
+     
+    System.out.println("Contraseña valida"+ getContraseña)
+        
+    else 
+    
+    System.out.println ("Contraseña no valida" + getContraseña)
+       
+     }
+       
     }
-    
-    
-    
 
 
-}*/
+}
     
 }
     
-
+*/
