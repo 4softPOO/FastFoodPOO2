@@ -75,3 +75,4 @@ public void telefono(int telefono ){
     this.telefono = telefono; 
 }
 
+}

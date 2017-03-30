@@ -5,6 +5,8 @@
  */
 package fastfood.vista;
 
+import fastfood.controlador.menuPrincipalControlador;
+
 /**
  *
  * @author COlo
@@ -158,6 +160,11 @@ public class menuPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
+        //AQUI CREAMOS LA INSTANCIA PARA QUE JNEUSTRO CONTROLADOR SE EJECUTE
+        menuPrincipalControlador obj6 = new menuPrincipalControlador();
+        obj6.conectarModelo();
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new menuPrincipal().setVisible(true);

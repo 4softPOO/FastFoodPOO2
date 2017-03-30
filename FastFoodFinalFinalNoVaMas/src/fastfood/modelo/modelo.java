@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package fastfood.modelo;
+import fastfood.controlador.menuPrincipalControlador;
 
 /**
  *
@@ -11,22 +12,19 @@ package fastfood.modelo;
  */
 public class modelo {
     
-    private String nombre;
+    private String nombre = "carlos santamaria";
     
     public modelo (){
     
     }
     
     
-    public String capturaNombre(){
-    
-     /*   ps = cn.prepareStatement("SELECT  nombre from usuario");
-        rs = ps.executeQuery();
-        //mostrardatos("");
-        rsm = rs.getMetaData(); */
+    public void capturaNombre(){
+         
+        menuPrincipalControlador obj1 = new menuPrincipalControlador();
+        obj1.setNombre(nombre);
+        obj1.imprimirNombre();
         
-            
-        return nombre;
     }
     
     

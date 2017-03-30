@@ -31,12 +31,15 @@ public class menuPrincipalControlador {
     }
     /*-----------------------------------------------------------------------------------------------------------*/
     
-    public void ConectarModelo(){
+    public void conectarModelo(){
     
         modelo obj = new modelo();
         obj.capturaNombre();
+    }
     
-    
+    public void imprimirNombre(){
+        
+        System.out.print(getNombre());
     }
     
 }
