@@ -20,10 +20,10 @@ public class modelo {
     
     public String capturaNombre(){
     
-        ps = cn.prepareStatement("SELECT  nombre from usuario");
+     /*   ps = cn.prepareStatement("SELECT  nombre from usuario");
         rs = ps.executeQuery();
         //mostrardatos("");
-        rsm = rs.getMetaData();
+        rsm = rs.getMetaData(); */
         
             
         return nombre;
