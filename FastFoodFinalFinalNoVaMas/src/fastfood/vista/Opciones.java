@@ -4,19 +4,23 @@
  * and open the template in the editor.
  */
 package fastfood.vista;
+
 import fastfood.controlador.opciones;
 
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
-int telefonoint;
+
+    int telefonoint;
+private opciones obj;
+
     /**
      * Creates new form Opciones
      */
     public Opciones() {
         initComponents();
+        obj = new opciones();
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,7 +48,7 @@ int telefonoint;
         jSeparator2 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        telefonoTF = new javax.swing.JTextField();
+        telefono = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         direccion = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
@@ -145,12 +149,12 @@ int telefonoint;
         jLabel12.setText("Contraseña Antigua:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 20));
 
-        telefonoTF.addActionListener(new java.awt.event.ActionListener() {
+        telefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefonoTFActionPerformed(evt);
+                telefonoActionPerformed(evt);
             }
         });
-        getContentPane().add(telefonoTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
+        getContentPane().add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel13.setText("Telefono:");
@@ -198,10 +202,10 @@ int telefonoint;
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-       menuPrincipal obj = new menuPrincipal();
+        menuPrincipal obj = new menuPrincipal();
         obj.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void actualizarDebitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarDebitoActionPerformed
@@ -226,23 +230,23 @@ int telefonoint;
         // repetir contraseña:
     }//GEN-LAST:event_repetirContraActionPerformed
 
-    private void telefonoTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoTFActionPerformed
+    private void telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoActionPerformed
         // telefono:
-        
-    }//GEN-LAST:event_telefonoTFActionPerformed
+
+    }//GEN-LAST:event_telefonoActionPerformed
 
     private void direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_direccionActionPerformed
         // direccion:
     }//GEN-LAST:event_direccionActionPerformed
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TODO add your handling code here:
-        opciones obj = new opciones();
-         obj.setContraAntigua(contraAntigua.getText());
-         obj.setContraNueva(contraNueva.getText());
-         obj.setRepetirContra(repetirContra.getText());
-         obj.setTelefono(telefonoint=Integer.parseInt(telefonoTF.getText()));
-         obj.setDireccion(direccion.getText());
+        // guardar:
+        obj.setContraAntigua(contraAntigua.getText());
+        obj.setContraNueva(contraNueva.getText());
+        obj.setRepetirContra(repetirContra.getText());
+        obj.setTelefono(telefono.getText());
+        obj.setDireccion(direccion.getText());
+        obj.actualizarDatos();
     }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
@@ -306,7 +310,7 @@ int telefonoint;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JTextField repetirContra;
-    private javax.swing.JTextField telefonoTF;
+    private javax.swing.JTextField telefono;
     private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }
