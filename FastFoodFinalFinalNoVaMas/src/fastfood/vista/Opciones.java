@@ -5,7 +5,7 @@
  */
 package fastfood.vista;
 
-import fastfood.controlador.opciones;
+import fastfood.controlador.*;
 
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
@@ -38,10 +38,7 @@ private opciones obj;
         repetirContra = new javax.swing.JTextField();
         usuario = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         eliminaCredito = new javax.swing.JButton();
-        eliminarDevito = new javax.swing.JButton();
-        actualizarDebito = new javax.swing.JButton();
         eliminarCredito = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -59,6 +56,7 @@ private opciones obj;
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 102, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
@@ -100,28 +98,11 @@ private opciones obj;
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel6.setText("Tarjeta De Credito: ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel7.setText("Tarjeta Debito:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         eliminaCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         eliminaCredito.setText("Eliminar");
-        getContentPane().add(eliminaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, -1, -1));
-
-        eliminarDevito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        eliminarDevito.setText("Eliminar");
-        getContentPane().add(eliminarDevito, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
-
-        actualizarDebito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        actualizarDebito.setText("Actualizar");
-        actualizarDebito.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                actualizarDebitoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(actualizarDebito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+        getContentPane().add(eliminaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, -1, -1));
 
         eliminarCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         eliminarCredito.setText("Actualizar");
@@ -130,7 +111,7 @@ private opciones obj;
                 eliminarCreditoActionPerformed(evt);
             }
         });
-        getContentPane().add(eliminarCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
+        getContentPane().add(eliminarCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/User-50 (1).png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 60));
@@ -168,7 +149,7 @@ private opciones obj;
         getContentPane().add(direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 130, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 255, 153));
-        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 620, 10));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 620, 10));
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel14.setText("Informacion personal");
@@ -181,7 +162,7 @@ private opciones obj;
                 jLabel8MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 70, 60));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 70, 60));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Save as-48.png"))); // NOI18N
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -190,13 +171,13 @@ private opciones obj;
                 jLabel9MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 530, 60, 60));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 470, 60, 60));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 10, 110));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/orig_83350.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 600));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -207,11 +188,6 @@ private opciones obj;
         this.dispose();
 
     }//GEN-LAST:event_jLabel8MouseClicked
-
-    private void actualizarDebitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarDebitoActionPerformed
-        actualizarMetodo obj2 = new actualizarMetodo();
-        obj2.setVisible(true);
-    }//GEN-LAST:event_actualizarDebitoActionPerformed
 
     private void eliminarCreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarCreditoActionPerformed
         actualizarMetodo obj3 = new actualizarMetodo();
@@ -285,13 +261,11 @@ private opciones obj;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton actualizarDebito;
     private javax.swing.JTextField contraAntigua;
     private javax.swing.JTextField contraNueva;
     private javax.swing.JTextField direccion;
     private javax.swing.JButton eliminaCredito;
     private javax.swing.JButton eliminarCredito;
-    private javax.swing.JButton eliminarDevito;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -302,7 +276,6 @@ private opciones obj;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JSeparator jSeparator1;

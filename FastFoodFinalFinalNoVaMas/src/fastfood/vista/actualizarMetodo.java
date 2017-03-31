@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package fastfood.vista;
-
+import fastfood.controlador.*;
 /**
  *
  * @author COlo
@@ -67,17 +67,17 @@ public class actualizarMetodo extends javax.swing.JFrame {
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, 20));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Visa", "MasterCard" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, -1, 20));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 120, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel13.setText("Numero");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, 20));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 120, 20));
+        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 120, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel14.setText("Fecha de Caducidad");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, 20));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 120, 20));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 120, 30));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel15.setText("Codigo de seguridad");
@@ -94,6 +94,11 @@ public class actualizarMetodo extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Save as-48.png"))); // NOI18N
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, 60));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Return-50.png"))); // NOI18N
@@ -115,6 +120,10 @@ public class actualizarMetodo extends javax.swing.JFrame {
 
         this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        //guardar:
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments

@@ -5,7 +5,7 @@
  */
 package fastfood.controlador;
 
-import fastfood.vista.Opciones;
+import fastfood.vista.*;
 
 /**
  *
