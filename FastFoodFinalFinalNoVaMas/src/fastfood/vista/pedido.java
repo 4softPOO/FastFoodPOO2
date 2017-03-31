@@ -11,7 +11,7 @@ package fastfood.vista;
  */
 public class pedido extends javax.swing.JFrame {
 
-    int bebida;
+  /*  int bebida;
     String sprite="$2200";
     int valSprite=2200;
     String coca = "$2800";
@@ -21,7 +21,8 @@ public class pedido extends javax.swing.JFrame {
     String jugo = "$1800";
     int valJugo=1800;
     int valBebida;
-    String valTot;
+    String valTot; */
+    String capSand;
     public pedido() {
         initComponents();
     }
@@ -35,14 +36,7 @@ public class pedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         optCoca = new javax.swing.JRadioButton();
@@ -53,64 +47,21 @@ public class pedido extends javax.swing.JFrame {
         labelCot = new javax.swing.JLabel();
         labelPrecioBebida = new javax.swing.JLabel();
         labelBebida = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         labelSandwich = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         labelTotal = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        comboSandwich = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel2.setText("ENSALADAS");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 129, 138, -1));
-
-        jButton2.setText("SELECCIONAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
-
-        jButton3.setText("SELECCIONAR");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, -1, -1));
-
-        jButton4.setText("SELECCIONAR");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel3.setText("SALSAS");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 166, 68, -1));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel4.setText("PAN");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 98, 47, -1));
-
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel6.setText("INGREDIENTE PRINCIPAL");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(46, 53, -1, 30));
-
-        jButton5.setText("SELECCIONAR");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
+        jLabel6.setText("SANDWICH");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, 30));
 
         jPanel1.setMinimumSize(new java.awt.Dimension(140, 140));
         jPanel1.setLayout(null);
@@ -167,11 +118,11 @@ public class pedido extends javax.swing.JFrame {
         labelBebida.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         labelBebida.setText("BEBIDA");
         getContentPane().add(labelBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 60, -1));
+        getContentPane().add(labelSandwich, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 74, 19));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel7.setText("SANDWICH");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 275, 80, 24));
-        getContentPane().add(labelSandwich, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 74, 19));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel8.setText("TOTAL");
@@ -195,6 +146,14 @@ public class pedido extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, -1));
 
+        comboSandwich.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sandwich 1", "Sandwich 2", "Sandwich 3", "Sandwich 4" }));
+        comboSandwich.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSandwichActionPerformed(evt);
+            }
+        });
+        getContentPane().add(comboSandwich, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
+
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
         jLabel9.setToolTipText("");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 380));
@@ -202,58 +161,42 @@ public class pedido extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-
-    }//GEN-LAST:event_jButton4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void optCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optCocaActionPerformed
-        if(optCoca.isSelected()){
+      /*  if(optCoca.isSelected()){
             labelPrecioBebida.setText(coca);
 
             // valTot=cocacola;
-        }
+        } */
         // TODO add your handling code here:
     }//GEN-LAST:event_optCocaActionPerformed
 
     private void optQuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optQuatroActionPerformed
-        if(optQuatro.isSelected()){
+     /*   if(optQuatro.isSelected()){
             labelPrecioBebida.setText(quatro);
             valBebida=valQuatro;
-        }
+        } */
         // TODO add your handling code here:
     }//GEN-LAST:event_optQuatroActionPerformed
 
     private void optSpriteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optSpriteActionPerformed
-        if(optSprite.isSelected()){
+     /*   if(optSprite.isSelected()){
             labelPrecioBebida.setText(sprite);
             valBebida=valSprite;
-        }
+        }*/
 
         // TODO add your handling code here:
     }//GEN-LAST:event_optSpriteActionPerformed
 
     private void optJugoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optJugoActionPerformed
-        if(optJugo.isSelected()){
+      /*  if(optJugo.isSelected()){
             labelPrecioBebida.setText(jugo);
             valBebida=valJugo;
-        }
+        } */
         // TODO add your handling code here:
     }//GEN-LAST:event_optJugoActionPerformed
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-
+        capSand = (String) comboSandwich.getSelectedItem();
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
@@ -261,6 +204,14 @@ public class pedido extends javax.swing.JFrame {
         obj3.setVisible(true);
 
     }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void comboSandwichActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSandwichActionPerformed
+        if(capSand == "Sandwich1"){
+            labelSandwich.setText(capSand);
+            
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboSandwichActionPerformed
 
     /**
      * @param args the command line arguments
@@ -298,16 +249,10 @@ public class pedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JComboBox<String> comboSandwich;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
