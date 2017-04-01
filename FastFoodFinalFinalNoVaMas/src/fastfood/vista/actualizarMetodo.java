@@ -34,11 +34,11 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jtfnumeroc = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jtffecha = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jPasswordField3 = new javax.swing.JPasswordField();
+        jtfcodigo = new javax.swing.JPasswordField();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
@@ -72,19 +72,25 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel13.setText("Numero");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, 20));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 120, 30));
+
+        jtfnumeroc.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfnumerocKeyTyped(evt);
+            }
+        });
+        getContentPane().add(jtfnumeroc, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 120, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel14.setText("Fecha de Caducidad");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, 20));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 120, 30));
+        getContentPane().add(jtffecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 120, 30));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel15.setText("Codigo de seguridad");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, 20));
 
-        jPasswordField3.setText("1234");
-        getContentPane().add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 40, 20));
+        jtfcodigo.setText("1234");
+        getContentPane().add(jtfcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 40, 20));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 10, 110));
@@ -124,6 +130,13 @@ public class actualizarMetodo extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         //guardar:
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jtfnumerocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfnumerocKeyTyped
+        // bloqueo de letras
+        char c = evt.getKeyChar();
+        if(c<'0'||c>'9')
+            evt.consume();
+    }//GEN-LAST:event_jtfnumerocKeyTyped
 
     /**
      * @param args the command line arguments
@@ -172,11 +185,11 @@ public class actualizarMetodo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JPasswordField jtfcodigo;
+    private javax.swing.JTextField jtffecha;
+    private javax.swing.JTextField jtfnumeroc;
     // End of variables declaration//GEN-END:variables
 }

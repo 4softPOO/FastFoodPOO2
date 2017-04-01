@@ -11,7 +11,7 @@ import fastfood.controlador.*;
 public class Opciones extends javax.swing.JFrame {
 
     int telefonoint;
-private opciones obj;
+    private opciones obj;
 
     /**
      * Creates new form Opciones
@@ -19,6 +19,8 @@ private opciones obj;
     public Opciones() {
         initComponents();
         obj = new opciones();
+        jtftelefono.setText(obj.telefonon);
+        jtfdireccion.setText(obj.direccionn);
     }
 
     /**
@@ -33,26 +35,27 @@ private opciones obj;
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        contraAntigua = new javax.swing.JTextField();
-        contraNueva = new javax.swing.JTextField();
-        repetirContra = new javax.swing.JTextField();
+        jtfcontraAntigua = new javax.swing.JTextField();
+        jtfcontraNueva = new javax.swing.JTextField();
+        jtfrepetirContra = new javax.swing.JTextField();
         usuario = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        eliminaCredito = new javax.swing.JButton();
-        eliminarCredito = new javax.swing.JButton();
+        bteliminaCredito = new javax.swing.JButton();
+        bteliminarCredito = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        telefono = new javax.swing.JTextField();
+        jtftelefono = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
-        direccion = new javax.swing.JTextField();
+        jtfdireccion = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,26 +74,26 @@ private opciones obj;
         jLabel3.setText("Repita Contraseña:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, 20));
 
-        contraAntigua.addActionListener(new java.awt.event.ActionListener() {
+        jtfcontraAntigua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contraAntiguaActionPerformed(evt);
+                jtfcontraAntiguaActionPerformed(evt);
             }
         });
-        getContentPane().add(contraAntigua, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 120, -1));
+        getContentPane().add(jtfcontraAntigua, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 120, -1));
 
-        contraNueva.addActionListener(new java.awt.event.ActionListener() {
+        jtfcontraNueva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contraNuevaActionPerformed(evt);
+                jtfcontraNuevaActionPerformed(evt);
             }
         });
-        getContentPane().add(contraNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 120, -1));
+        getContentPane().add(jtfcontraNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 120, -1));
 
-        repetirContra.addActionListener(new java.awt.event.ActionListener() {
+        jtfrepetirContra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                repetirContraActionPerformed(evt);
+                jtfrepetirContraActionPerformed(evt);
             }
         });
-        getContentPane().add(repetirContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 120, -1));
+        getContentPane().add(jtfrepetirContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 120, -1));
 
         usuario.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
         usuario.setText("Carlos Castro");
@@ -100,18 +103,18 @@ private opciones obj;
         jLabel6.setText("Tarjeta De Credito: ");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
-        eliminaCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        eliminaCredito.setText("Eliminar");
-        getContentPane().add(eliminaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, -1, -1));
+        bteliminaCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        bteliminaCredito.setText("Eliminar");
+        getContentPane().add(bteliminaCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, -1, -1));
 
-        eliminarCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        eliminarCredito.setText("Actualizar");
-        eliminarCredito.addActionListener(new java.awt.event.ActionListener() {
+        bteliminarCredito.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        bteliminarCredito.setText("Actualizar");
+        bteliminarCredito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarCreditoActionPerformed(evt);
+                bteliminarCreditoActionPerformed(evt);
             }
         });
-        getContentPane().add(eliminarCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        getContentPane().add(bteliminarCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/User-50 (1).png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 60));
@@ -130,23 +133,28 @@ private opciones obj;
         jLabel12.setText("Contraseña Antigua:");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 20));
 
-        telefono.addActionListener(new java.awt.event.ActionListener() {
+        jtftelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                telefonoActionPerformed(evt);
+                jtftelefonoActionPerformed(evt);
             }
         });
-        getContentPane().add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
+        jtftelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtftelefonoKeyTyped(evt);
+            }
+        });
+        getContentPane().add(jtftelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 130, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel13.setText("Telefono:");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, 20));
 
-        direccion.addActionListener(new java.awt.event.ActionListener() {
+        jtfdireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                direccionActionPerformed(evt);
+                jtfdireccionActionPerformed(evt);
             }
         });
-        getContentPane().add(direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 130, -1));
+        getContentPane().add(jtfdireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 180, 130, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 255, 153));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 620, 10));
@@ -176,6 +184,10 @@ private opciones obj;
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 10, 110));
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jLabel5.setText("0000000000000000");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, -1, -1));
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 540));
 
@@ -189,41 +201,51 @@ private opciones obj;
 
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void eliminarCreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarCreditoActionPerformed
+    private void bteliminarCreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteliminarCreditoActionPerformed
         actualizarMetodo obj3 = new actualizarMetodo();
         obj3.setVisible(true);
-    }//GEN-LAST:event_eliminarCreditoActionPerformed
+    }//GEN-LAST:event_bteliminarCreditoActionPerformed
 
-    private void contraAntiguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraAntiguaActionPerformed
+    private void jtfcontraAntiguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfcontraAntiguaActionPerformed
         // contraseña antigua:
-    }//GEN-LAST:event_contraAntiguaActionPerformed
+    }//GEN-LAST:event_jtfcontraAntiguaActionPerformed
 
-    private void contraNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraNuevaActionPerformed
+    private void jtfcontraNuevaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfcontraNuevaActionPerformed
         // contraseña nueva:
-    }//GEN-LAST:event_contraNuevaActionPerformed
+    }//GEN-LAST:event_jtfcontraNuevaActionPerformed
 
-    private void repetirContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_repetirContraActionPerformed
+    private void jtfrepetirContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfrepetirContraActionPerformed
         // repetir contraseña:
-    }//GEN-LAST:event_repetirContraActionPerformed
+    }//GEN-LAST:event_jtfrepetirContraActionPerformed
 
-    private void telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoActionPerformed
-        // telefono:
+    private void jtftelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtftelefonoActionPerformed
+        // telefono:        
+    }//GEN-LAST:event_jtftelefonoActionPerformed
 
-    }//GEN-LAST:event_telefonoActionPerformed
-
-    private void direccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_direccionActionPerformed
+    private void jtfdireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfdireccionActionPerformed
         // direccion:
-    }//GEN-LAST:event_direccionActionPerformed
+    }//GEN-LAST:event_jtfdireccionActionPerformed
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // guardar:
-        obj.setContraAntigua(contraAntigua.getText());
-        obj.setContraNueva(contraNueva.getText());
-        obj.setRepetirContra(repetirContra.getText());
-        obj.setTelefono(telefono.getText());
-        obj.setDireccion(direccion.getText());
+        obj.setContraAntigua(jtfcontraAntigua.getText());
+        obj.setContraNueva(jtfcontraNueva.getText());
+        obj.setRepetirContra(jtfrepetirContra.getText());
+        obj.setTelefono(jtftelefono.getText());
+        obj.setDireccion(jtfdireccion.getText());
         obj.actualizarDatos();
+        jtftelefono.setText(obj.telefono);
+        jtfcontraAntigua.setText("");
+        jtfcontraNueva.setText("");
+        jtfrepetirContra.setText("");
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jtftelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtftelefonoKeyTyped
+        char c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jtftelefonoKeyTyped
 
     /**
      * @param args the command line arguments
@@ -261,11 +283,8 @@ private opciones obj;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField contraAntigua;
-    private javax.swing.JTextField contraNueva;
-    private javax.swing.JTextField direccion;
-    private javax.swing.JButton eliminaCredito;
-    private javax.swing.JButton eliminarCredito;
+    private javax.swing.JButton bteliminaCredito;
+    private javax.swing.JButton bteliminarCredito;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -275,6 +294,7 @@ private opciones obj;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -282,8 +302,11 @@ private opciones obj;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JTextField repetirContra;
-    private javax.swing.JTextField telefono;
+    private javax.swing.JTextField jtfcontraAntigua;
+    private javax.swing.JTextField jtfcontraNueva;
+    private javax.swing.JTextField jtfdireccion;
+    private javax.swing.JTextField jtfrepetirContra;
+    private javax.swing.JTextField jtftelefono;
     private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,7 +18,9 @@ public class opciones {
     public String contraNueva;
     public String repetirContra;
     public String telefono;
+    public String telefonon = "1234567";
     public String direccion;
+    public String direccionn = "call 68b #31-03";
 
     public opciones() {
 
@@ -73,7 +75,10 @@ public class opciones {
         if (getContraAntigua().equals(contraseña)) {
             if (getContraNueva().equals(getRepetirContra())) {
                 contraseña = contraNueva;
+                telefonon = telefono;
+                direccionn = direccion;
                 System.out.println("contraseña cambiada con exito");
+                System.out.println("datos actualizados");
             } else {
                 System.out.println("contraseña nueva no coincide");
             }
@@ -81,5 +86,7 @@ public class opciones {
             System.out.println("contraseña antigua incorrecta");
         }
         System.out.println(contraseña);
+        System.out.println(telefono);
+        System.out.println(direccion);
     }
 }
