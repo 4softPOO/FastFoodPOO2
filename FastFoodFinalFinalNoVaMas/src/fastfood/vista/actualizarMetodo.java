@@ -4,18 +4,23 @@
  * and open the template in the editor.
  */
 package fastfood.vista;
+
 import fastfood.controlador.*;
+
 /**
  *
  * @author COlo
  */
 public class actualizarMetodo extends javax.swing.JFrame {
+    
+    private credito obj;
 
     /**
      * Creates new form actualizarMetodo
      */
     public actualizarMetodo() {
         initComponents();
+        obj = new credito();
     }
 
     /**
@@ -38,7 +43,7 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jtffecha = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jtfcodigo = new javax.swing.JPasswordField();
+        jpdpass = new javax.swing.JPasswordField();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
@@ -89,8 +94,13 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel15.setText("Codigo de seguridad");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, 20));
 
-        jtfcodigo.setText("1234");
-        getContentPane().add(jtfcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 40, 20));
+        jpdpass.setText("1234");
+        jpdpass.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jpdpassKeyTyped(evt);
+            }
+        });
+        getContentPane().add(jpdpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 40, 20));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 10, 110));
@@ -123,20 +133,32 @@ public class actualizarMetodo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
-
+        
         this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         //guardar:
+        obj.setNumero(jtfnumeroc.getText());
+        obj.setFecha(jtffecha.getText());
+        obj.setPass(jpdpass.getText());
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jtfnumerocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfnumerocKeyTyped
         // bloqueo de letras
         char c = evt.getKeyChar();
-        if(c<'0'||c>'9')
+        if (c < '0' || c > '9') {
             evt.consume();
+        }
     }//GEN-LAST:event_jtfnumerocKeyTyped
+
+    private void jpdpassKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpdpassKeyTyped
+        // pass de la tarjeta
+        char c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jpdpassKeyTyped
 
     /**
      * @param args the command line arguments
@@ -188,7 +210,7 @@ public class actualizarMetodo extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JPasswordField jtfcodigo;
+    private javax.swing.JPasswordField jpdpass;
     private javax.swing.JTextField jtffecha;
     private javax.swing.JTextField jtfnumeroc;
     // End of variables declaration//GEN-END:variables

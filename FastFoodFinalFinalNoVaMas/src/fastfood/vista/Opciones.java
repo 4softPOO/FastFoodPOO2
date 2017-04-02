@@ -10,8 +10,8 @@ import fastfood.controlador.*;
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
 
-    int telefonoint;
-    private opciones obj;
+     private opciones obj;
+     private credito obj1;
 
     /**
      * Creates new form Opciones
@@ -19,8 +19,10 @@ public class Opciones extends javax.swing.JFrame {
     public Opciones() {
         initComponents();
         obj = new opciones();
+        obj1=new credito();
         jtftelefono.setText(obj.telefonon);
         jtfdireccion.setText(obj.direccionn);
+        jltarjeta.setText(obj1.numero);
     }
 
     /**
@@ -55,7 +57,7 @@ public class Opciones extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
-        jLabel5 = new javax.swing.JLabel();
+        jltarjeta = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -184,9 +186,9 @@ public class Opciones extends javax.swing.JFrame {
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 10, 110));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel5.setText("0000000000000000");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, -1, -1));
+        jltarjeta.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
+        jltarjeta.setText("0000000000000000");
+        getContentPane().add(jltarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 350, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 540));
@@ -238,6 +240,7 @@ public class Opciones extends javax.swing.JFrame {
         jtfcontraAntigua.setText("");
         jtfcontraNueva.setText("");
         jtfrepetirContra.setText("");
+        jltarjeta.setText(obj1.pass);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jtftelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtftelefonoKeyTyped
@@ -294,7 +297,6 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -302,6 +304,7 @@ public class Opciones extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JLabel jltarjeta;
     private javax.swing.JTextField jtfcontraAntigua;
     private javax.swing.JTextField jtfcontraNueva;
     private javax.swing.JTextField jtfdireccion;

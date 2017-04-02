@@ -7,6 +7,7 @@ package fastfood.controlador;
 
 import fastfood.vista.*;
 
+import fastfood.controlador.credito;
 /**
  *
  * @author Paua
@@ -21,6 +22,7 @@ public class opciones {
     public String telefonon = "1234567";
     public String direccion;
     public String direccionn = "call 68b #31-03";
+    public String fecha;
 
     public opciones() {
 

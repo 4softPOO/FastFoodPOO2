@@ -5,6 +5,8 @@
  */
 package fastfood.controlador;
 
+import fastfood.vista.*;
+
 /**
  *
  * @author Andres Arias
@@ -12,9 +14,11 @@ package fastfood.controlador;
 public class credito {
 
     public String numero;
-    public String numeron;
+    public String numeron = "1234123412341234";
     public String fecha;
-    public String fechan;
+    public String fechan = "11/18";
+    public String pass;
+    public String passn = "1234";
 
     public credito() {
 
@@ -36,4 +40,21 @@ public class credito {
         this.fecha = fecha;
     }
 
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+    
+    public void actualizartargeta(){
+        passn=pass;
+        numeron=numero;
+        fechan=fecha;
+        System.out.println(fecha);
+        System.out.println(numero);
+        System.out.println(pass);
+        
+    }
 }
