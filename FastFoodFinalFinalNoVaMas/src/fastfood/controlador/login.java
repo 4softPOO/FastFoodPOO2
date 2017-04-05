@@ -45,44 +45,19 @@ public class login {
     public char[] getContra() {
         return contra;
     }
+
+    
 }
+
     /*----------------------------------------------------------------------------------------------------------*/
-    
-    /* public void validarDatos () {
-
-     do {
-
-    if  (usuario !=  getUsuario)
-    
-        System.out.println ("Usuario no valido" + getUsuario)        
-    else 
-    
-    	Systemystem.out.println("Usuario valido"+ getUsuario)
-	
-    } while (getUsuario == 3) 
-        
-   
-    do {
-
-	if(contraseña !=  getContraseña)
-   
-        System.out.println ("Contraseña no valida" + getContraseña)        
-    
-	else 
   
-    	Systemystem.out.println("Contraseña valida"+ getUsuario)
+    */validarDatos() {
 
-
-    } while (getContraseña == 3) 
-        
+    if(usuario !=  getUsuario || contraseña != getContraseña)
     
-    System.out.print("Usuario "+ getUsuario()+ "Contraseña " + getContra());
-        
-    }
 
+    System.out.println ("Usuario no valido" + getUsuario + "Contraseña no valida" + getContraseña)        
+    }    
 
-}
-    
-}
-    
-*/
+  usuario = "Mario"
+    contra = "1234"
