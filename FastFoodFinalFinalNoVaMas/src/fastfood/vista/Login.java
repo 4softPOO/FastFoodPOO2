@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package fastfood.vista;
+
 import fastfood.controlador.login;
 
 /**
@@ -16,7 +17,12 @@ public class Login extends javax.swing.JFrame {
     
     
     public Login() {
-        initComponents();
+    
+    initComponents();
+    setLocationRelativeTo(null);
+    setResizable(false);
+    setTitle ("login ");
+    
     }
 
     /**
@@ -106,15 +112,17 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_usuActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-         
+        
        login obj = new login();
        obj.setUsuario(usu.getText());
-       obj.setContra(contra.getPassword());
-       
+       obj.setContra(contra.getText());
+   
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
       
+        registro obj = new registro();
+                
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void usuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuMouseClicked

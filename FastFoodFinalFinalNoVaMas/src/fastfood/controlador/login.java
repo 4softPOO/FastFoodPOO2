@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package fastfood.controlador;
+
 import fastfood.vista.*;
+
+import fastfood.controlador.*;
 
 
 /**
@@ -13,9 +16,10 @@ import fastfood.vista.*;
  */
 public class login {
     
-    
-    private String usuario;
-    private char[] contra;
+    public String user;
+    public String pass; 
+    public String usuario = "otorres";
+    public String  contra = "4576";
     
 
     
@@ -31,9 +35,9 @@ public class login {
         
     }
 
-    public void setContra(char[] contra) {
+    public void setContra(String contra) {
         this.contra = contra;
-        //validarDatos();
+     
     }
 
 
@@ -42,23 +46,28 @@ public class login {
     }
 
 
-    public char[] getContra() {
+    public String getContra() {
         return contra;
     }
 
+    public void validarDatos() {
+
+        System.out.println(getContra());
+        System.out.println(getUsuario());
+         
+
+    if ( user  != usuario  || pass != contra){
+      
+        System.out.println ("Usuario no valido" + getUsuario() + "Contraseña no valida" + getContra());        
     
-}
-
-    /*----------------------------------------------------------------------------------------------------------*/
-  
-    /*
-validarDatos() {
-
-    if(usuario !=  getUsuario || contraseña != getContraseña)
+    } else{
+        System.out.println ("Usuario  valido" + getUsuario() + "Contraseña valida" + getContra());        
     
+    }   
+    
+    }
+  }
+   
 
-    System.out.println ("Usuario no valido" + getUsuario + "Contraseña no valida" + getContraseña)        
-    }    
-
-  usuario = "Mario"
-    contra = "1234"
+ 
+ 
