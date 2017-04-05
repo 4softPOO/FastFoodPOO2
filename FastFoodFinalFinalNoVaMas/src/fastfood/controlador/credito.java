@@ -7,6 +7,8 @@ package fastfood.controlador;
 
 import fastfood.vista.*;
 
+import fastfood.controlador.*;
+
 /**
  *
  * @author Andres Arias
@@ -47,14 +49,14 @@ public class credito {
     public void setPass(String pass) {
         this.pass = pass;
     }
-    
-    public void actualizartargeta(){
-        passn=pass;
-        numeron=numero;
-        fechan=fecha;
+
+    public void actualizartargeta() {
+        passn = pass;
+        numeron = numero;
+        fechan = fecha;
         System.out.println(fecha);
         System.out.println(numero);
         System.out.println(pass);
-        
+
     }
 }

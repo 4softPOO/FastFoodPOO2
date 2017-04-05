@@ -240,7 +240,6 @@ public class Opciones extends javax.swing.JFrame {
         jtfcontraAntigua.setText("");
         jtfcontraNueva.setText("");
         jtfrepetirContra.setText("");
-        jltarjeta.setText(obj1.pass);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jtftelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtftelefonoKeyTyped

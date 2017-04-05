@@ -142,6 +142,7 @@ public class actualizarMetodo extends javax.swing.JFrame {
         obj.setNumero(jtfnumeroc.getText());
         obj.setFecha(jtffecha.getText());
         obj.setPass(jpdpass.getText());
+        
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jtfnumerocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfnumerocKeyTyped
