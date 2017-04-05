@@ -51,7 +51,8 @@ public class login {
 
     /*----------------------------------------------------------------------------------------------------------*/
   
-    */validarDatos() {
+    /*
+validarDatos() {
 
     if(usuario !=  getUsuario || contraseña != getContraseña)
     
