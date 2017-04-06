@@ -15,13 +15,11 @@ public class Login extends javax.swing.JFrame {
 
     
     
-    
+    String check;
     public Login() {
     
     initComponents();
-    setLocationRelativeTo(null);
-    setResizable(false);
-    setTitle ("login ");
+    
     
     }
 
@@ -42,7 +40,7 @@ public class Login extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        contra = new javax.swing.JPasswordField();
+        contra = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,7 +50,6 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("FastFood");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 170, 40));
 
-        usu.setText("Usuario");
         usu.setMinimumSize(new java.awt.Dimension(8, 20));
         usu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -76,7 +73,7 @@ public class Login extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 40, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 40, 30));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/user (2).png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 40, 50));
@@ -96,9 +93,7 @@ public class Login extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(0, 255, 153));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 380, 20));
-
-        contra.setText("contraseña");
-        getContentPane().add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 180, 30));
+        getContentPane().add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 180, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -112,24 +107,31 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_usuActionPerformed
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        
+       
        login obj = new login();
        obj.setUsuario(usu.getText());
        obj.setContra(contra.getText());
-   
+       obj.validarDatos();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
       
         registro obj = new registro();
-                
+        obj.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void usuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuMouseClicked
        usu.setText("");
     }//GEN-LAST:event_usuMouseClicked
 
+    public void cambiarInterfaz(Boolean val1){
+        
+        menuPrincipal ob4 = new menuPrincipal();
+        ob4.setVisible(val1);
+        this.dispose();
     
+    }
     
     
     /**
@@ -168,7 +170,7 @@ public class Login extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField contra;
+    private javax.swing.JTextField contra;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

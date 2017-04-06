@@ -10,8 +10,8 @@ import fastfood.controlador.*;
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
 
-     private opciones obj;
-     private credito obj1;
+    private opciones obj;
+    private credito obj1;
 
     /**
      * Creates new form Opciones
@@ -19,7 +19,8 @@ public class Opciones extends javax.swing.JFrame {
     public Opciones() {
         initComponents();
         obj = new opciones();
-        obj1=new credito();
+        obj1 = new credito();
+        jltarjeta.setText(obj1.numeron);
         jtftelefono.setText(obj.telefonon);
         jtfdireccion.setText(obj.direccionn);
         jltarjeta.setText(obj1.numero);

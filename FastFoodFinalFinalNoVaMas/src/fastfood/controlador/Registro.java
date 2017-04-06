@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package fastfood.controlador;
-import fastfood.vista.*;
+import fastfood.vista.registro;
 
 
 /**
@@ -15,17 +15,17 @@ import fastfood.vista.*;
 
 public class Registro  {
     
-   private  String nombre;
-   private  String apellido;
-   private  String direccion;
-   private  String correo;
-   private  char []  contraseña; 
-   private  char [] valContraseña;
-   private  String tarjetaCredito;
-   private  String fecha; 
-   private int     codigoSeguridad;  
-   private  int    numero;
-   private  int    telefono;
+   private  String nombre ="Carlos ";
+   private  String apellido="Santamaria";
+   private  String direccion = "call 68b #31-03";
+   private  String correo ="csantamaria@hotmail.com";
+   private  String contraseña = "abc123"; 
+   private  String valContraseña = "abc123";
+   private  String tarjetaCredito = "MasterCard";
+   private  String fecha = "02/2023"; 
+   private  String codigoSeguridad =" 232";  
+   private  String numero = "23457698132457";
+   private  String telefono = "1234567";
     
    public Registro() {  
           }   
@@ -47,11 +47,11 @@ public void correo (String correo){
     this.correo = correo; 
 }
 
-public void contraseña (char [] contraseña){
+public void contraseña (String contraseña){
     this.contraseña = contraseña;
 }
 
-public void valContraseña(char[] valContraseña){
+public void valContraseña(String valContraseña){
     this.valContraseña = valContraseña;
     }
 
@@ -63,16 +63,25 @@ public void fecha (String fecha){
     this.fecha = fecha; 
 }    
 
-public void  codigoSeguridad (int codigoSeguridad){
+public void  codigoSeguridad (String  codigoSeguridad){
     this.codigoSeguridad = codigoSeguridad;
 }
 
-public void numero (int numero){
+public void numero (String numero){
     this.numero = numero;
 }
 
-public void telefono(int telefono ){
+public void telefono(String  telefono ){
     this.telefono = telefono; 
 }
 
+public void validarContra(){
+
+if (contraseña == valContraseña){
+
+    System.out.println("Validacion correcta ");
+} 
+else
+    System.out.println("Contraseña incorrecta");
+    }
 }

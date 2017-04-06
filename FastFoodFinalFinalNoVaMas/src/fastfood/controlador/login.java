@@ -7,7 +7,7 @@ package fastfood.controlador;
 
 import fastfood.vista.*;
 
-import fastfood.controlador.*;
+import fastfood.controlador.menuPrincipalControlador;
 
 
 /**
@@ -16,10 +16,12 @@ import fastfood.controlador.*;
  */
 public class login {
     
-    public String user;
-    public String pass; 
-    public String usuario = "otorres";
-    public String  contra = "4576";
+    public String user = "csantamaria";
+    public String pass = "4576"; 
+    public String usuario;
+    public String  contra ;
+    public boolean val1;
+   
     
 
     
@@ -56,13 +58,17 @@ public class login {
         System.out.println(getUsuario());
          
 
-    if ( user  != usuario  || pass != contra){
+    if ( user.equals(getUsuario())  && pass.equals(getContra())){
       
-        System.out.println ("Usuario no valido" + getUsuario() + "Contraseña no valida" + getContra());        
-    
+        System.out.println ("Usuario  valido: " +  usuario + "Contraseña valida: " + contra);        
+        val1 = true;
+        Login obj = new Login();
+        obj.cambiarInterfaz(val1);
+        obj.dispose();  
+                    
+        
     } else{
-        System.out.println ("Usuario  valido" + getUsuario() + "Contraseña valida" + getContra());        
-    
+        System.out.println ("Usuario no valido" + usuario + "Contraseña no valida" + contra);   
     }   
     
     }

@@ -14,6 +14,7 @@ import fastfood.controlador.*;
 public class actualizarMetodo extends javax.swing.JFrame {
     
     private credito obj;
+    String cbeleccion;
 
     /**
      * Creates new form actualizarMetodo
@@ -37,15 +38,15 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jcbele = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
         jtfnumeroc = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jtffecha = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jpdpass = new javax.swing.JPasswordField();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        jtfpass = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -71,8 +72,8 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel12.setText("Tarjeta Credito");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, 20));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Visa", "MasterCard" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 120, -1));
+        jcbele.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Visa", "MasterCard" }));
+        getContentPane().add(jcbele, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 120, -1));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel13.setText("Numero");
@@ -94,19 +95,18 @@ public class actualizarMetodo extends javax.swing.JFrame {
         jLabel15.setText("Codigo de seguridad");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, 20));
 
-        jpdpass.setText("1234");
-        jpdpass.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jpdpassKeyTyped(evt);
-            }
-        });
-        getContentPane().add(jpdpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 40, 20));
-
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 10, 110));
 
         jSeparator2.setForeground(new java.awt.Color(0, 255, 153));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 560, 20));
+
+        jtfpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfpassActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jtfpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 50, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Save as-48.png"))); // NOI18N
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -115,7 +115,7 @@ public class actualizarMetodo extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 60, 60));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 50, 50));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Return-50.png"))); // NOI18N
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -139,10 +139,11 @@ public class actualizarMetodo extends javax.swing.JFrame {
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         //guardar:
+        obj.setTitular(cbeleccion=(String) jcbele.getSelectedItem());
         obj.setNumero(jtfnumeroc.getText());
         obj.setFecha(jtffecha.getText());
-        obj.setPass(jpdpass.getText());
-        
+        obj.setPass(jtfpass.getText());
+        obj.actualizartarjeta();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jtfnumerocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfnumerocKeyTyped
@@ -153,13 +154,9 @@ public class actualizarMetodo extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jtfnumerocKeyTyped
 
-    private void jpdpassKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jpdpassKeyTyped
-        // pass de la tarjeta
-        char c = evt.getKeyChar();
-        if (c < '0' || c > '9') {
-            evt.consume();
-        }
-    }//GEN-LAST:event_jpdpassKeyTyped
+    private void jtfpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfpassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,7 +194,6 @@ public class actualizarMetodo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -211,8 +207,9 @@ public class actualizarMetodo extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JPasswordField jpdpass;
+    private javax.swing.JComboBox<String> jcbele;
     private javax.swing.JTextField jtffecha;
     private javax.swing.JTextField jtfnumeroc;
+    private javax.swing.JTextField jtfpass;
     // End of variables declaration//GEN-END:variables
 }

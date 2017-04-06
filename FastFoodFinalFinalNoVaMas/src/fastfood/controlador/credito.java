@@ -21,6 +21,8 @@ public class credito {
     public String fechan = "11/18";
     public String pass;
     public String passn = "1234";
+    public String eleccion = "visa";
+    public String titular;
 
     public credito() {
 
@@ -50,13 +52,27 @@ public class credito {
         this.pass = pass;
     }
 
-    public void actualizartargeta() {
-        passn = pass;
-        numeron = numero;
-        fechan = fecha;
-        System.out.println(fecha);
-        System.out.println(numero);
-        System.out.println(pass);
+    public String getTitular() {
+        return titular;
+    }
 
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public void actualizartarjeta() {
+        if (getNumero().equals(numeron)) {
+
+            System.out.println("la targeta ya existe, ingrese otra");
+        } else {
+            numeron = numero;
+            fechan = fecha;
+            eleccion = titular;
+            passn = pass;
+        }
+        System.out.println(numeron);
+        System.out.println(fechan);
+        System.out.println(eleccion);
+        System.out.println(passn);
     }
 }
