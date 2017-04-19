@@ -15,7 +15,7 @@ public class Login extends javax.swing.JFrame {
 
     
     
-    String check;
+
     public Login() {
     
     initComponents();
