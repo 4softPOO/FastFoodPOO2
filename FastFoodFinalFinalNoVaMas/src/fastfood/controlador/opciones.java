@@ -5,9 +5,19 @@
  */
 package fastfood.controlador;
 
+import fastfood.modelo.Conexion;
 import fastfood.vista.*;
 
 import fastfood.controlador.credito;
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 /**
  *
  * @author Paua
@@ -15,16 +25,18 @@ import fastfood.controlador.credito;
 public class opciones {
 
     public String contraAntigua;
-    public String contraseña = "abc123";
+    public String contraseñaDB;
     public String contraNueva;
     public String repetirContra;
     public String telefono;
-    public String telefonon = "1234567";
+    public String telefononDB;
     public String direccion;
-    public String direccionn = "call 68b #31-03";
+    public String direccionnDB;
     public String fecha;
 
     public opciones() {
+        
+        
 
     }
 
@@ -74,11 +86,11 @@ public class opciones {
         System.out.println(getRepetirContra());
         System.out.println(getTelefono());
         System.out.println(getDireccion());
-        if (getContraAntigua().equals(contraseña)) {
+        if (getContraAntigua().equals(contraseñaDB)) {
             if (getContraNueva().equals(getRepetirContra())) {
-                contraseña = contraNueva;
-                telefonon = telefono;
-                direccionn = direccion;
+                contraseñaDB = contraNueva;
+                telefononDB = telefono;
+                direccionnDB = direccion;
                 System.out.println("contraseña cambiada con exito");
                 System.out.println("datos actualizados");
             } else {
@@ -87,8 +99,37 @@ public class opciones {
         } else {
             System.out.println("contraseña antigua incorrecta");
         }
-        System.out.println(contraseña);
+        System.out.println(contraseñaDB);
         System.out.println(telefono);
         System.out.println(direccion);
     }
+    
+    public void obtenerDatosDB(){
+        Conexion cc = new Conexion();
+        Connection cn = cc.conexion();
+        
+        Statement st = null;
+        
+        try {
+            st = cn.createStatement();
+        } catch (SQLException ex) {
+            Logger.getLogger(opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            ResultSet rs = st.executeQuery("SELECT  ");
+        } catch (SQLException ex) {
+            Logger.getLogger(opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+//        try{
+//        
+//        PreparedStatement pst = cn.prepareStatement("UPDATE sucursal SET id_sucursal='"+codigo.getText()+"',nombre_sucursal='"+nombre.getText()+"',direccion_sucursal='"+direccion.getText()+"' WHERE id_sucursal='"+codigo.getText()+"'");
+//        pst.executeUpdate();
+//        mostrardatos("");
+//        }catch (Exception zaa){
+//        
+//        System.out.print(zaa.getMessage());
+//        }
+   }
+    
 }

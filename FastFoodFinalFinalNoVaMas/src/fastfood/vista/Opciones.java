@@ -21,8 +21,8 @@ public class Opciones extends javax.swing.JFrame {
         obj = new opciones();
         obj1 = new credito();
         jltarjeta.setText(obj1.numeron);
-        jtftelefono.setText(obj.telefonon);
-        jtfdireccion.setText(obj.direccionn);
+        jtftelefono.setText(obj.telefononDB);
+        jtfdireccion.setText(obj.direccionnDB);
         jltarjeta.setText(obj1.numero);
     }
 
