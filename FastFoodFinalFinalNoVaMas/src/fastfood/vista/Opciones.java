@@ -21,9 +21,8 @@ public class Opciones extends javax.swing.JFrame {
         obj = new fastfood.controlador.Opciones();
         obj1 = new credito();
         jltarjeta.setText(obj1.numeron);
-        jtftelefono.setText(obj.telefononDB);
-        jtfdireccion.setText(obj.direccionnDB);
-        jltarjeta.setText(obj1.numero);
+        jtftelefono.setText(obj.telefono);
+        jtfdireccion.setText(obj.direccion);
     }
 
     /**
