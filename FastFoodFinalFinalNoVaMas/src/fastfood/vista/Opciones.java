@@ -6,34 +6,23 @@
 package fastfood.vista;
 
 import fastfood.controlador.*;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 //dhfhiyfhc
 public class Opciones extends javax.swing.JFrame {
 
-//    private fastfood.controlador.Opciones obj;
-//    private credito obj1;
-    private fastfood.controlador.Opciones opciones;
-    
+    private fastfood.controlador.Opciones obj;
+    private credito obj1;
 
     /**
      * Creates new form Opciones
      */
-    public Opciones() throws SQLException, Exception {
+    public Opciones() {
         initComponents();
-        opciones = new fastfood.controlador.Opciones();
-        opciones.conexionModelo();
-//        obj = new fastfood.controlador.Opciones();
-//        obj.actualizarDatos();
-//        obj1 = new credito();
-//        jltarjeta.setText(obj1.getNumero());
-//        jtftelefono.setText(obj.getTelefono());
-//        jtfdireccion.setText(obj.getDireccion());
-
-        
-
+        obj = new fastfood.controlador.Opciones();
+        obj1 = new credito();
+        jltarjeta.setText(obj1.numeron);
+        jtftelefono.setText(obj.telefono);
+        jtfdireccion.setText(obj.direccion);
     }
 
     /**
@@ -241,10 +230,16 @@ public class Opciones extends javax.swing.JFrame {
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // guardar:
+        obj.setContraAntigua(jtfcontraAntigua.getText());
+        obj.setContraNueva(jtfcontraNueva.getText());
+        obj.setRepetirContra(jtfrepetirContra.getText());
+        obj.setTelefono(jtftelefono.getText());
+        obj.setDireccion(jtfdireccion.getText());
+        obj.actualizarDatos();
+        jtftelefono.setText(obj.telefono);
         jtfcontraAntigua.setText("");
         jtfcontraNueva.setText("");
         jtfrepetirContra.setText("");
-        
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jtftelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtftelefonoKeyTyped
@@ -284,13 +279,7 @@ public class Opciones extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    new Opciones().setVisible(true);
-                } catch (SQLException ex) {
-                    Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (Exception ex) {
-                    Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                new Opciones().setVisible(true);
             }
         });
     }
