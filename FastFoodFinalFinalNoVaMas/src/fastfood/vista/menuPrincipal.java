@@ -6,6 +6,7 @@
 package fastfood.vista;
 
 import fastfood.controlador.menuPrincipalControlador;
+import fastfood.vista.Opciones;
 
 /**
  *
@@ -121,8 +122,8 @@ public class menuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        Opciones obj2 = new Opciones();
-        obj2.setVisible(true);
+//        Opciones obj2 = new Opciones();
+//        obj2.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 

@@ -7,6 +7,7 @@ package fastfood.controlador;
 
 import fastfood.modelo.Conexion;
 import fastfood.vista.*;
+import fastfood.modelo.*;
 
 import fastfood.controlador.credito;
 import java.sql.SQLException;
@@ -16,7 +17,7 @@ import java.sql.PreparedStatement;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+import javax.swing.JTextField;
 
 /**
  *
@@ -25,8 +26,9 @@ import java.util.logging.Logger;
 public class opciones {
 
     public String contraAntigua;
-    public String contraseñaDB;
-    public String contraNueva;
+    public String contraVista;
+    public String contraNuevaVista1;
+    public String contraNuevaVista2;
     public String repetirContra;
     public String telefono;
     public String telefononDB;
@@ -34,10 +36,35 @@ public class opciones {
     public String direccionnDB;
     public String fecha;
 
-    public opciones() {
-        
-        
+    private Opciones_server server;
 
+    public opciones() {
+        server = new Opciones_server();
+
+    }
+
+    public String getContraVista() {
+        return contraVista;
+    }
+
+    public void setContraVista(String contraVista) {
+        this.contraVista = contraVista;
+    }
+
+    public String getContraNuevaVista1() {
+        return contraNuevaVista1;
+    }
+
+    public void setContraNuevaVista1(String contraNuevaVista1) {
+        this.contraNuevaVista1 = contraNuevaVista1;
+    }
+
+    public String getContraNuevaVista2() {
+        return contraNuevaVista2;
+    }
+
+    public void setContraNuevaVista2(String contraNuevaVista2) {
+        this.contraNuevaVista2 = contraNuevaVista2;
     }
 
     public String getContraAntigua() {
@@ -46,14 +73,6 @@ public class opciones {
 
     public void setContraAntigua(String contraAntigua) {
         this.contraAntigua = contraAntigua;
-    }
-
-    public String getContraNueva() {
-        return contraNueva;
-    }
-
-    public void setContraNueva(String contraNueva) {
-        this.contraNueva = contraNueva;
     }
 
     public String getRepetirContra() {
@@ -80,56 +99,31 @@ public class opciones {
         this.direccion = direccion;
     }
 
-    public void actualizarDatos() {
-        System.out.println(getContraAntigua());
-        System.out.println(getContraNueva());
-        System.out.println(getRepetirContra());
-        System.out.println(getTelefono());
-        System.out.println(getDireccion());
-        if (getContraAntigua().equals(contraseñaDB)) {
-            if (getContraNueva().equals(getRepetirContra())) {
-                contraseñaDB = contraNueva;
-                telefononDB = telefono;
-                direccionnDB = direccion;
-                System.out.println("contraseña cambiada con exito");
-                System.out.println("datos actualizados");
+    public opciones obtenerDatosDB() throws Exception {
+        //Opciones_server server = new Opciones_server();
+        opciones retorno1 = server.obtenerDatosDB();
+        retorno1.getTelefono();
+        retorno1.getDireccion();
+
+        return retorno1;
+    }
+
+    public opciones actualizarDatosDB() throws Exception {
+        opciones retorno2 = server.obtenerDatosDB();
+        if (retorno2.getContraAntigua().equals(getContraVista())) {
+            if (getContraNuevaVista1().equals(getContraNuevaVista2())) {
+                server.actualizarDatosDB();
+                System.out.println("contraseña y datos actualizados");
             } else {
                 System.out.println("contraseña nueva no coincide");
             }
         } else {
             System.out.println("contraseña antigua incorrecta");
         }
-        System.out.println(contraseñaDB);
-        System.out.println(telefono);
-        System.out.println(direccion);
+        System.out.println(retorno2.getContraAntigua());
+        System.out.println(getContraVista());
+        System.out.println(getContraNuevaVista2());
+
+        return retorno2;
     }
-    
-    public void obtenerDatosDB(){
-        Conexion cc = new Conexion();
-        Connection cn = cc.conexion();
-        
-        Statement st = null;
-        
-        try {
-            st = cn.createStatement();
-        } catch (SQLException ex) {
-            Logger.getLogger(opciones.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
-            ResultSet rs = st.executeQuery("SELECT  ");
-        } catch (SQLException ex) {
-            Logger.getLogger(opciones.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-//        try{
-//        
-//        PreparedStatement pst = cn.prepareStatement("UPDATE sucursal SET id_sucursal='"+codigo.getText()+"',nombre_sucursal='"+nombre.getText()+"',direccion_sucursal='"+direccion.getText()+"' WHERE id_sucursal='"+codigo.getText()+"'");
-//        pst.executeUpdate();
-//        mostrardatos("");
-//        }catch (Exception zaa){
-//        
-//        System.out.print(zaa.getMessage());
-//        }
-   }
-    
 }

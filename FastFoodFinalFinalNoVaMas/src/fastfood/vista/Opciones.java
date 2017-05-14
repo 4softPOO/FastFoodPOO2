@@ -15,24 +15,18 @@ public class Opciones extends javax.swing.JFrame {
 
 //    private fastfood.controlador.Opciones obj;
 //    private credito obj1;
-    private fastfood.controlador.Opciones opciones;
-    
+    private opciones Option;
 
     /**
      * Creates new form Opciones
      */
     public Opciones() throws SQLException, Exception {
         initComponents();
-        opciones = new fastfood.controlador.Opciones();
-        opciones.conexionModelo();
-//        obj = new fastfood.controlador.Opciones();
-//        obj.actualizarDatos();
-//        obj1 = new credito();
-//        jltarjeta.setText(obj1.getNumero());
-//        jtftelefono.setText(obj.getTelefono());
-//        jtfdireccion.setText(obj.getDireccion());
-
-        
+        Option = new opciones();
+        Option.obtenerDatosDB();
+        opciones mostrar = Option.obtenerDatosDB();
+        jtftelefono.setText(mostrar.getDireccion());
+        jtfdireccion.setText(mostrar.getTelefono());
 
     }
 
@@ -240,11 +234,20 @@ public class Opciones extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfdireccionActionPerformed
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // guardar:
+        try {
+            // guardar:
+            Option.actualizarDatosDB();
+
+        } catch (Exception ex) {
+            Logger.getLogger(Opciones.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Option.setContraVista(jtfcontraAntigua.getText());
+        Option.setContraNuevaVista1(jtfcontraNueva.getText());
+        Option.setContraNuevaVista2(jtfrepetirContra.getText());
         jtfcontraAntigua.setText("");
         jtfcontraNueva.setText("");
         jtfrepetirContra.setText("");
-        
+
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jtftelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtftelefonoKeyTyped
