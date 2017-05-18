@@ -5,6 +5,8 @@
  */
 package fastfood.vista;
 
+import fastfood.controlador.Registro;
+
 /**
  *
  * @author COlo
@@ -34,32 +36,32 @@ public class registro extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
+        apellido = new javax.swing.JTextField();
+        correo = new javax.swing.JTextField();
+        telefono = new javax.swing.JTextField();
+        direccion = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
         jLabel9 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        tarjeta = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        numeroT = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        fechaC = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jPasswordField3 = new javax.swing.JPasswordField();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
+        contra = new javax.swing.JTextField();
+        contraval = new javax.swing.JTextField();
+        codigoS = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -91,11 +93,11 @@ public class registro extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel6.setText("Direccion");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 120, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 120, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 140, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 120, -1));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 120, -1));
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 120, -1));
+        getContentPane().add(apellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 120, -1));
+        getContentPane().add(correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 140, -1));
+        getContentPane().add(telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 120, 20));
+        getContentPane().add(direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 120, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel7.setText("Contraseña");
@@ -104,12 +106,6 @@ public class registro extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel8.setText("Confirmar contraseña");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
-
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 140, -1));
-
-        jPasswordField2.setText("jPasswordField2");
-        getContentPane().add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 140, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel9.setText("Informacion Personal");
@@ -130,25 +126,22 @@ public class registro extends javax.swing.JFrame {
         jLabel12.setText("*Tarjeta Credito");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Visa", "MasterCard" }));
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, 20));
+        tarjeta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Visa", "MasterCard" }));
+        getContentPane().add(tarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, 20));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel13.setText("*Numero");
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, -1, -1));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 420, 120, -1));
+        getContentPane().add(numeroT, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 420, 120, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel14.setText("*Fecha de Caducidad");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, -1, 20));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 120, -1));
+        getContentPane().add(fechaC, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 120, -1));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
         jLabel15.setText("*Codigo de seguridad");
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, -1, -1));
-
-        jPasswordField3.setText("jPasswordField3");
-        getContentPane().add(jPasswordField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 420, 40, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 255, 153));
         getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 600, 10));
@@ -164,6 +157,11 @@ public class registro extends javax.swing.JFrame {
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Save as-48.png"))); // NOI18N
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel17MouseClicked(evt);
+            }
+        });
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 530, 50, 50));
 
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -171,6 +169,27 @@ public class registro extends javax.swing.JFrame {
 
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
         getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 10, 110));
+
+        contra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contraActionPerformed(evt);
+            }
+        });
+        getContentPane().add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 140, -1));
+
+        contraval.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contravalActionPerformed(evt);
+            }
+        });
+        getContentPane().add(contraval, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 140, 20));
+
+        codigoS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                codigoSActionPerformed(evt);
+            }
+        });
+        getContentPane().add(codigoS, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 420, 70, 20));
 
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 600));
@@ -184,6 +203,38 @@ public class registro extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_jLabel16MouseClicked
+
+    private void contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contraActionPerformed
+
+    private void contravalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contravalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contravalActionPerformed
+
+    private void codigoSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codigoSActionPerformed
+
+    private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
+      
+        
+      Registro reg = new Registro();
+      reg.setNombre(nombre.getText());
+      reg.setApellido(apellido.getText());
+      reg.setCodigoSeguridad(codigoS.getText());
+      reg.setContraseña(contra.getText());
+      reg.setCorreo(correo.getText());
+      reg.setDireccion(direccion.getText());
+      reg.setFecha(fechaC.getText());
+      reg.setTarjetaCredito(tarjeta.getItemAt(WIDTH));
+      reg.setValContraseña(contraval.getText());
+      reg.setTelefono(telefono.getText());
+      reg.setNumero(numeroT.getText());
+      reg.mostrar();
+      
+     
+    }//GEN-LAST:event_jLabel17MouseClicked
 
     /**
      * @param args the command line arguments
@@ -221,7 +272,13 @@ public class registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField apellido;
+    private javax.swing.JTextField codigoS;
+    private javax.swing.JTextField contra;
+    private javax.swing.JTextField contraval;
+    private javax.swing.JTextField correo;
+    private javax.swing.JTextField direccion;
+    private javax.swing.JTextField fechaC;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -240,20 +297,14 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JPasswordField jPasswordField3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JTextField numeroT;
+    private javax.swing.JComboBox<String> tarjeta;
+    private javax.swing.JTextField telefono;
     // End of variables declaration//GEN-END:variables
 }

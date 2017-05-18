@@ -93,6 +93,12 @@ public class Login extends javax.swing.JFrame {
 
         jSeparator1.setForeground(new java.awt.Color(0, 255, 153));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 380, 20));
+
+        contra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contraActionPerformed(evt);
+            }
+        });
         getContentPane().add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 180, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
@@ -124,6 +130,10 @@ public class Login extends javax.swing.JFrame {
     private void usuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuMouseClicked
        usu.setText("");
     }//GEN-LAST:event_usuMouseClicked
+
+    private void contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contraActionPerformed
 
     public void cambiarInterfaz(Boolean val1){
         

@@ -8,6 +8,13 @@ package fastfood.controlador;
 import fastfood.vista.*;
 
 import fastfood.controlador.menuPrincipalControlador;
+import fastfood.modelo.Conexion;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -16,8 +23,8 @@ import fastfood.controlador.menuPrincipalControlador;
  */
 public class login {
     
-    public String user = "csantamaria";
-    public String pass = "4576"; 
+    public String user;
+    public String pass ; 
     public String usuario;
     public String  contra ;
     public boolean val1;
@@ -71,6 +78,7 @@ public class login {
         System.out.println ("Usuario no valido" + usuario + "Contraseña no valida" + contra);   
     }   
     
+
     }
   }
    
