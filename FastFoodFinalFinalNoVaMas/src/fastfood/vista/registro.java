@@ -16,8 +16,13 @@ public class registro extends javax.swing.JFrame {
     /**
      * Creates new form registro
      */
+    
+    String card;
+    
+    
     public registro() {
         initComponents();
+         
     }
 
     /**
@@ -126,7 +131,13 @@ public class registro extends javax.swing.JFrame {
         jLabel12.setText("*Tarjeta Credito");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
 
-        tarjeta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "Visa", "MasterCard" }));
+        tarjeta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Visa", "MasterCard" }));
+        tarjeta.setSelectedItem(tarjeta);
+        tarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tarjetaActionPerformed(evt);
+            }
+        });
         getContentPane().add(tarjeta, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, -1, 20));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 16)); // NOI18N
@@ -175,14 +186,14 @@ public class registro extends javax.swing.JFrame {
                 contraActionPerformed(evt);
             }
         });
-        getContentPane().add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 140, -1));
+        getContentPane().add(contra, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 180, 140, 30));
 
         contraval.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contravalActionPerformed(evt);
             }
         });
-        getContentPane().add(contraval, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 140, 20));
+        getContentPane().add(contraval, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 220, 140, 30));
 
         codigoS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -205,7 +216,7 @@ public class registro extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void contraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_contraActionPerformed
 
     private void contravalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contravalActionPerformed
@@ -215,11 +226,12 @@ public class registro extends javax.swing.JFrame {
     private void codigoSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoSActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_codigoSActionPerformed
-
+             
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
       
+       
         
-      Registro reg = new Registro();
+     Registro reg = new Registro();
       reg.setNombre(nombre.getText());
       reg.setApellido(apellido.getText());
       reg.setCodigoSeguridad(codigoS.getText());
@@ -227,14 +239,30 @@ public class registro extends javax.swing.JFrame {
       reg.setCorreo(correo.getText());
       reg.setDireccion(direccion.getText());
       reg.setFecha(fechaC.getText());
-      reg.setTarjetaCredito(tarjeta.getItemAt(WIDTH));
+      reg.setTarjetaCredito(card);
       reg.setValContraseña(contraval.getText());
       reg.setTelefono(telefono.getText());
       reg.setNumero(numeroT.getText());
       reg.mostrar();
-      
+     
      
     }//GEN-LAST:event_jLabel17MouseClicked
+
+    private void tarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tarjetaActionPerformed
+       
+        card  = tarjeta.getSelectedItem().toString();
+     
+        if (card == "Visa")
+        {
+        card = "Visa";
+        }
+         if (card == "Master Card ")
+        {
+        card = "MasterCard ";
+        }
+     
+       
+    }//GEN-LAST:event_tarjetaActionPerformed
 
     /**
      * @param args the command line arguments

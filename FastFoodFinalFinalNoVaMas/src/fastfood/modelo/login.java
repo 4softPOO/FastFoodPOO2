@@ -5,6 +5,11 @@
  */
 package fastfood.modelo;
 
+import fastfood.controlador.opciones;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 /**                 
  * 
  *
@@ -12,5 +17,8 @@ package fastfood.modelo;
  */
 public class login {
     
+    public opciones obtenerDatosDB() throws SQLException {
+        Statement stamento = cn.createStatement();
+        ResultSet resultado = stamento.executeQuery("SELECT telefono, direccion, nombre1, apellido1, contraseña, numero from usuario, metodo_pago where idusuario = 1 and cod_metodo_pago = idmetodo_pago;");
     
 }

@@ -12,7 +12,7 @@ import fastfood.controlador.menuPrincipalControlador;
  */
 public class modelo {
     
-    private String nombre = "carlos santamaria";
+    private String nombre;
     
     public modelo (){
     

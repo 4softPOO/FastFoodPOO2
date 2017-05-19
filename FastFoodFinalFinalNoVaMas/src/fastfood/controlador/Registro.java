@@ -119,13 +119,12 @@ public class Registro  {
         this.telefono = telefono;
     }
       
-   
     
+       
     public void mostrar () {
     
-        
-        System.out.println (getNombre()+" " +getApellido()+" " + getTelefono()+" " + getNumero()+" " +getCodigoSeguridad()+" "+getFecha()+" "  + getValContraseña()+" " +getContraseña()+" " +getCorreo()+" " + getDireccion());        
-                
+    System.out.println (getNombre()+" " +getApellido()+" " + getTelefono()+" " + getNumero()+" " +getCodigoSeguridad()+" "+getFecha()+" "  + getValContraseña()+" " +getContraseña()+" " +getCorreo()+" " + getDireccion());        
+               
     }
    
 }
