@@ -113,17 +113,17 @@ public class pagos extends javax.swing.JFrame {
 
     private void optDebitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optDebitoActionPerformed
         if(optDebito.isSelected()){
-        labelCuotas.setVisible(false);
-        textCuotas.setVisible(false);
+            labelCuotas.setVisible(false);
+            textCuotas.setVisible(false);
         }
-            
+
         // TODO add your handling code here:
     }//GEN-LAST:event_optDebitoActionPerformed
 
     private void optEfectivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optEfectivoActionPerformed
         if(optEfectivo.isSelected()){
             labelCuotas.setVisible(false);
-        textCuotas.setVisible(false);
+            textCuotas.setVisible(false);
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_optEfectivoActionPerformed

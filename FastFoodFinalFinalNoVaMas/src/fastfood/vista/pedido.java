@@ -4,13 +4,16 @@
  * and open the template in the editor.
  */
 package fastfood.vista;
+import javax.swing.JComboBox;
 
 /**
  *
  * @author ESTUDIANTE1201T
  */
 public class pedido extends javax.swing.JFrame {
-
+    int valbeb=0;
+    int valsand=0;
+    int valtot=0;
   /*  int bebida;
     String sprite="$2200";
     int valSprite=2200;
@@ -26,7 +29,7 @@ public class pedido extends javax.swing.JFrame {
     public pedido() {
         initComponents();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -36,182 +39,219 @@ public class pedido extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel6 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        grupo1 = new javax.swing.ButtonGroup();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        labelBebida = new javax.swing.JLabel();
+        labelSand = new javax.swing.JLabel();
+        labelTotal = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        labelPan = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        labelIngre = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        labelNom = new javax.swing.JLabel();
+        comboSand = new javax.swing.JComboBox<>();
         optCoca = new javax.swing.JRadioButton();
         optQuatro = new javax.swing.JRadioButton();
         optSprite = new javax.swing.JRadioButton();
         optJugo = new javax.swing.JRadioButton();
-        jLabel10 = new javax.swing.JLabel();
-        labelCot = new javax.swing.JLabel();
-        labelPrecioBebida = new javax.swing.JLabel();
-        labelBebida = new javax.swing.JLabel();
-        labelSandwich = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        labelTotal = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        comboSandwich = new javax.swing.JComboBox<>();
+        imagen = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel6.setText("SANDWICH");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, 30));
+        jLabel1.setText("SANDWICH");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(100, 270, 70, 14);
 
-        jPanel1.setMinimumSize(new java.awt.Dimension(140, 140));
-        jPanel1.setLayout(null);
+        jLabel2.setText("BEBIDA");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(100, 310, 60, 14);
 
-        jLabel5.setText("BEBIDAS");
-        jPanel1.add(jLabel5);
-        jLabel5.setBounds(26, 11, 65, 14);
+        jLabel3.setText("TOTAL");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(100, 340, 50, 14);
+        getContentPane().add(labelBebida);
+        labelBebida.setBounds(210, 310, 50, 20);
+        getContentPane().add(labelSand);
+        labelSand.setBounds(210, 270, 50, 20);
+        getContentPane().add(labelTotal);
+        labelTotal.setBounds(210, 340, 50, 20);
 
-        optCoca.setText("COCA-COLA");
+        jLabel4.setText("SANDWICH");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(80, 90, 60, 14);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Receipt-50.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(280, 290, 60, 50);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/checked (5).png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(520, 310, 40, 30);
+
+        jLabel7.setText("PAN");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(80, 160, 50, 14);
+        getContentPane().add(labelPan);
+        labelPan.setBounds(170, 160, 110, 20);
+
+        jLabel8.setText("INGREDIENTE");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(80, 200, 80, 14);
+        getContentPane().add(labelIngre);
+        labelIngre.setBounds(180, 200, 110, 20);
+
+        jLabel10.setText("NOMBRE");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(80, 130, 60, 14);
+        getContentPane().add(labelNom);
+        labelNom.setBounds(170, 130, 110, 0);
+
+        comboSand.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sandwich 1", "Sandwich 2", "Sandwich 3", "Sandwich  4" }));
+        comboSand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSandActionPerformed(evt);
+            }
+        });
+        getContentPane().add(comboSand);
+        comboSand.setBounds(170, 90, 120, 20);
+
+        grupo1.add(optCoca);
+        optCoca.setText("CocaCola");
         optCoca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 optCocaActionPerformed(evt);
             }
         });
-        jPanel1.add(optCoca);
-        optCoca.setBounds(6, 32, 100, 23);
+        getContentPane().add(optCoca);
+        optCoca.setBounds(420, 80, 100, 23);
 
-        optQuatro.setText("QUATRO");
+        grupo1.add(optQuatro);
+        optQuatro.setText("Quatro");
         optQuatro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 optQuatroActionPerformed(evt);
             }
         });
-        jPanel1.add(optQuatro);
-        optQuatro.setBounds(6, 58, 100, 23);
+        getContentPane().add(optQuatro);
+        optQuatro.setBounds(420, 110, 100, 23);
 
-        optSprite.setText("SPRITE");
+        grupo1.add(optSprite);
+        optSprite.setText("Sprite");
         optSprite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 optSpriteActionPerformed(evt);
             }
         });
-        jPanel1.add(optSprite);
-        optSprite.setBounds(6, 84, 100, 23);
+        getContentPane().add(optSprite);
+        optSprite.setBounds(420, 140, 100, 23);
 
-        optJugo.setText("JUGO HIT");
+        grupo1.add(optJugo);
+        optJugo.setText("Jugo");
         optJugo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 optJugoActionPerformed(evt);
             }
         });
-        jPanel1.add(optJugo);
-        optJugo.setBounds(6, 110, 100, 23);
-        jPanel1.add(jLabel10);
-        jLabel10.setBounds(0, 0, 140, 190);
+        getContentPane().add(optJugo);
+        optJugo.setBounds(420, 170, 100, 23);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 50, 140, 140));
+        imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/orig_83350.jpg"))); // NOI18N
+        getContentPane().add(imagen);
+        imagen.setBounds(-6, -15, 660, 400);
 
-        labelCot.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelCot.setText("Precios");
-        getContentPane().add(labelCot, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 240, 126, 24));
-        getContentPane().add(labelPrecioBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 74, 20));
-
-        labelBebida.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        labelBebida.setText("BEBIDA");
-        getContentPane().add(labelBebida, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 60, -1));
-        getContentPane().add(labelSandwich, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 74, 19));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel7.setText("SANDWICH");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 275, 80, 24));
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
-        jLabel8.setText("TOTAL");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 60, -1));
-        getContentPane().add(labelTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 340, 74, 18));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/Receipt-50.png"))); // NOI18N
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, -1, -1));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/checked (5).png"))); // NOI18N
-        jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, -1, -1));
-
-        comboSandwich.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sandwich 1", "Sandwich 2", "Sandwich 3", "Sandwich 4" }));
-        comboSandwich.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboSandwichActionPerformed(evt);
-            }
-        });
-        getContentPane().add(comboSandwich, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fastfood/imagenes/fondo.jpg"))); // NOI18N
-        jLabel9.setToolTipText("");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 380));
+        jLabel9.setText("jLabel9");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(180, 180, 34, 14);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void optCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optCocaActionPerformed
-      /*  if(optCoca.isSelected()){
-            labelPrecioBebida.setText(coca);
+    private void optSpriteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optSpriteActionPerformed
+       if(optSprite.isSelected())
+        {
+        labelBebida.setText("2200");
+        valbeb=2200;
+        }
+    }//GEN-LAST:event_optSpriteActionPerformed
 
-            // valTot=cocacola;
-        } */
-        // TODO add your handling code here:
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        valtot=valbeb+valsand;
+        String valtotS;
+        valtotS=Integer.toString(valtot);
+        labelTotal.setText(valtotS);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    pagos obj = new pagos();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void optCocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optCocaActionPerformed
+        if(optCoca.isSelected())
+        {
+        labelBebida.setText("2800");
+        valbeb=2800;
+        }
     }//GEN-LAST:event_optCocaActionPerformed
 
     private void optQuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optQuatroActionPerformed
-     /*   if(optQuatro.isSelected()){
-            labelPrecioBebida.setText(quatro);
-            valBebida=valQuatro;
-        } */
-        // TODO add your handling code here:
+       if(optQuatro.isSelected())
+        {
+        labelBebida.setText("2500");
+        valbeb=2500;
+        }
     }//GEN-LAST:event_optQuatroActionPerformed
 
-    private void optSpriteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optSpriteActionPerformed
-     /*   if(optSprite.isSelected()){
-            labelPrecioBebida.setText(sprite);
-            valBebida=valSprite;
-        }*/
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_optSpriteActionPerformed
-
     private void optJugoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_optJugoActionPerformed
-      /*  if(optJugo.isSelected()){
-            labelPrecioBebida.setText(jugo);
-            valBebida=valJugo;
-        } */
-        // TODO add your handling code here:
+        if(optJugo.isSelected())
+        {
+        labelBebida.setText("1800");
+        valbeb=1800;
+        }
     }//GEN-LAST:event_optJugoActionPerformed
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        capSand = (String) comboSandwich.getSelectedItem();
-    }//GEN-LAST:event_jLabel11MouseClicked
-
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        pagos obj3= new pagos ();
-        obj3.setVisible(true);
-
-    }//GEN-LAST:event_jLabel12MouseClicked
-
-    private void comboSandwichActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSandwichActionPerformed
-        if(capSand == "Sandwich1"){
-            labelSandwich.setText(capSand);
-            
+    private void comboSandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSandActionPerformed
+        String sandwich;
+        sandwich = comboSand.getSelectedItem().toString();
+        if(sandwich=="Sandwich 1")
+        {
+        labelSand.setText("5200");
+        valsand=5200;
         }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboSandwichActionPerformed
+        if(sandwich=="Sandwich 2")
+        {
+        labelSand.setText("6500");
+        valsand=6500;
+        }
+        if(sandwich=="Sandwich 3")
+        {
+        labelSand.setText("6000");
+        valsand=6000;
+        }
+        if(sandwich=="Sandwich 4")
+        {
+        labelSand.setText("8500");
+        valsand=8500;
+        }
+    }//GEN-LAST:event_comboSandActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,20 +289,24 @@ public class pedido extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> comboSandwich;
+    private javax.swing.JComboBox<String> comboSand;
+    private javax.swing.ButtonGroup grupo1;
+    private javax.swing.JLabel imagen;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelBebida;
-    private javax.swing.JLabel labelCot;
-    private javax.swing.JLabel labelPrecioBebida;
-    private javax.swing.JLabel labelSandwich;
+    private javax.swing.JLabel labelIngre;
+    private javax.swing.JLabel labelNom;
+    private javax.swing.JLabel labelPan;
+    private javax.swing.JLabel labelSand;
     private javax.swing.JLabel labelTotal;
     private javax.swing.JRadioButton optCoca;
     private javax.swing.JRadioButton optJugo;
